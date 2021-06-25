@@ -3,7 +3,7 @@
 os=$(shell uname -s | tr '[:upper:]' '[:lower:]')
 arch="amd64"
 
-i2i-client:
+recovery:
 	@GOOS=${os} GOARCH=${arch} CGO_ENABLED=0 go build ./cmd/recovery
 
 clean:

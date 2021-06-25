@@ -29,7 +29,8 @@ func createRevokeCommand() *cobra.Command {
 
 func createStoreCommand() *cobra.Command {
 	return &cobra.Command{
-		Use:   "store",
+		Use:   "store [destination]",
+		Args:  cobra.ExactArgs(1),
 		Short: "store encrypted keychain",
 		Long:  `store encrypted keychain`,
 		Run:   store,
