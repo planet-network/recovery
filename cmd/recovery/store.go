@@ -47,7 +47,7 @@ func store(cmd *cobra.Command, args []string) {
 		fail(err)
 	}
 
-	fmt.Printf("-> storing keychain to %q", args[0])
+	fmt.Printf("-> storing keychain to %q\n", args[0])
 	if err := ioutil.WriteFile(args[0], encryptedKeychain, 0600); err != nil {
 		fail(err)
 	}
